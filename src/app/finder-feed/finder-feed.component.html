@@ -1,0 +1,19 @@
+<body>
+  <div class="container text-center">
+    <h3>Seek A Seeker</h3>
+  </div>
+  <div class="container">
+    <div class="card-deck row-cols-3">
+      <div class="col-8" *ngFor='let profile of profiles'>
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>{{profile.predisktraits}}</mat-card-title>
+            <mat-card-subtitle>{{profile.prefskills}}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>{{profile.companies}}</mat-card-content>
+          <mat-card-content>{{profile.prevjobs}}</mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</body>
