@@ -1,0 +1,8 @@
+<input type= "text" placeholder="Email" [(ngModel)]= "email">
+<input type= "text" placeholder="Password" [(ngModel)]= "password">
+<button (click)="login()">Click to Login</button>
+<br>
+<br>
+<input type="file" name="image" id="image" (change)="selectImage($event)">
+<button (click)="onSubmit()">Click to Submit</button>
+<br>
