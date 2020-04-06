@@ -13,6 +13,8 @@ export class SignupComponent implements OnInit {
   phone:string
   email:string 
   password:string
+  valid:boolean
+
   constructor(private numverify: NumverifyService , private http: HttpClient)
 
   { }
@@ -29,6 +31,7 @@ export class SignupComponent implements OnInit {
     phone: this.phone,
     email: this.email,
     password: this.password
+    // profileType: this.profileType
     }
     };
 
@@ -38,7 +41,7 @@ export class SignupComponent implements OnInit {
       res => {
       console.log(res);
       localStorage.setItem("token", res.sessionToken);
-      localStorage.setItem("profileType", "") //need to insert value
+      localStorage.setItem("profileType", res.profileType) //need to insert value
       },
       err=> console.log(err)
     );
@@ -48,6 +51,12 @@ export class SignupComponent implements OnInit {
       this.numverify.verifynum(this.phone).subscribe(
         res => {
           console.log(res)
+          //  res = this.phone
+          if (res.valid === true) {
+           this.signup()
+          } else {
+            return alert ("Please provide a valid phone number.")
+          }
         }
       )
     }

@@ -1,4 +1,48 @@
-<h1>Finder Seeker</h1>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <h1>FinderSeeker</h1>
+    <div class="container">
+      <div class="box-logo rotate"></div>
+    </div>
+    <span class="example-fill-remaining-space"></span>
+    <div>
+      <a mat-button [routerLink]="'/Home'"> Home </a>
+      <!-- <a mat-button [routerLink]="'/Signup'"> Signup </a> -->
+      <a mat-button [routerLink]="'/Login'"> Login </a>
+      <a mat-button [routerLink]="'/Finders'"> Finders</a>
+      <a mat-button [routerLink]="'/Seekers'"> Seekers</a>
+      <a mat-button [routerLink]="'/Admin'"> Admin</a>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<!-- <nav mat-tab-nav-bar>
+  <a mat-tab-link
+  *ngFor="let link of navLinks"
+  [routerLink]="link.link"
+  routerLinkActive #rla="routerLinkActive"
+  [active]="rla.isActive">
+  </a>
+  </nav> -->
+
+<!-- <nav mat-tab-nav-bar value="accent">
+  <a mat-tab-link 
+  *ngFor="let link of links"
+     (click)="activeLink = link"
+     (click)="activeLink = link"
+     [active]="activeLink == link"> {{link}} </a>
+</nav> -->
+
+<!-- <nav>
+<mat-tab-group #compRef (selectedTabChange)="logChange(comp.Ref.selectedComp)">
+  <mat-tab label="Angular">Angular Content</mat-tab>
+  <mat-tab label="Angular">Angular Content</mat-tab>
+  <mat-tab label="Angular">Angular Content</mat-tab>
+</mat-tab-group>
+{{tabRef.selectedComp}}
+</nav> -->
+
+<!-- <h1>Finder Seeker</h1>
 
 <div>
   <app-finder-profile></app-finder-profile>
@@ -11,7 +55,8 @@
 </div>
 <div>
   <app-finder-feed></app-finder-feed>
-</div>
+</div> -->
+
 <!-- <div>
   <button mat-button> Click Me! </button>
   <button mat-icon-button> Icon </button>
@@ -28,19 +73,10 @@
   {{toggleGroup.value}}
 </div> -->
 
-<div>
-<mat-toolbar>
-  <span>My Application</span>
-</mat-toolbar>
-</div>
-
 <!-- <div>
   <mat-icon>face</mat-icon>
 </div> -->
 
-
 <router-outlet></router-outlet>
-<app-login></app-login>
-<app-signup></app-signup>
-
-
+<!-- <app-login></app-login>
+<app-signup></app-signup> -->

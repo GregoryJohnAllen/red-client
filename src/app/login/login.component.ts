@@ -15,29 +15,9 @@ image
 constructor(private http: HttpClient)
 { }
 
-  ngOnInit(): void {
-  }
-  selectImage(event){
-    if(event.target.files.length>0){
-    this.image=event.target.files[0]
-    console.log(this.image)
-    }
-    }
+  ngOnInit(): void {}
 
-    onSubmit(){
-    let formData = new FormData
-    formData.append("file", this.image)
-
-    const reqHeaders=new HttpHeaders({Authorization: localStorage.getItem("token")
-    });
-
-    this.http.post<any>("http://localhost:3000/finder/create", formData, {headers:reqHeaders}).subscribe(
-      res => console.log(res),
-      err=> console.log(err)
-  );
-}
   
-
     login(){
     let formData = {
     user: {
