@@ -1,53 +1,4 @@
-<!-- <br>
-<input type= "text" placeholder="First Name" [(ngModel)]= "fname">
-<input type= "text" placeholder="Last Name" [(ngModel)]= "lname">
-<input type= "text" placeholder="Phone" [(ngModel)]= "phone">
-<input type= "text" placeholder="Email" [(ngModel)]= "email">
-<input type= "text" placeholder="Password" [(ngModel)]= "password">
-<button (click)="signup()">Click to Signup</button> -->
 
-<!-- <div class="rightside">
-  <md-card fxLayout="row">
-    <mat-card-title>Signup</mat-card-title>
-    <mat-card-content>
-      <form>
-        <p>
-          <mat-form-field>
-            <input type="text" placeholder="First Name" [(ngModel)]="fname" />
-          </mat-form-field>
-        </p>
-
-        <p>
-          <mat-form-field>
-            <input type="text" placeholder="Last Name" [(ngModel)]="lname" />
-          </mat-form-field>
-        </p>
-
-        <p>
-          <mat-form-field>
-            <input type="text" placeholder="Phone" [(ngModel)]="phone" />
-          </mat-form-field>
-        </p>
-
-        <p>
-          <mat-form-field>
-            <input type="text" placeholder="Email" [(ngModel)]="email" />
-          </mat-form-field>
-        </p>
-
-        <p>
-          <mat-form-field>
-            <input type="text" placeholder="Password" [(ngModel)]="password" />
-          </mat-form-field>
-        </p>
-
-        <div class="button">
-          <button (click)="signup()">Click to Signup</button>
-        </div>
-      </form>
-    </mat-card-content>
-  </mat-card>
-</div> -->
 
 <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
 
@@ -68,6 +19,7 @@
 
         <mat-form-field class="example-full-width">
           <input type="phone" required matInput placeholder="Phone (X-XXX-XXX-XXXX)" [(ngModel)]="phone" name="phonenumber"/>
+          <!-- <small class="text-danger" [class.d-none]="name.invalid || name.untouched"> Must be a valid phone number. XXX-XXX-XXXX </small> -->
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
