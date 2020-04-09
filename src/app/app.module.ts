@@ -13,9 +13,12 @@ import { FinderFeedComponent } from './finder-feed/finder-feed.component';
 import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FinderformComponent } from './finderform/finderform.component';
+import { SeekerformComponent } from './seekerform/seekerform.component'
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +28,9 @@ import { SignupComponent } from './signup/signup.component';
     FinderFeedComponent,
     HomeComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    FinderformComponent,
+    SeekerformComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,9 @@ import { SignupComponent } from './signup/signup.component';
     MatCardModule,
     HttpClientModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    FlexLayoutModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
