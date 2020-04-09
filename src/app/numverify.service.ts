@@ -10,8 +10,9 @@ export class NumverifyService {
   private _url:string = 'http://apilayer.net/api/validate?access_key=' + `${this.access_key}` + '&number='
 
   constructor(private http:HttpClient) { }
-  verifynum(phone:string){
+  verifynum(phone:string):any{
     return this.http.get(this._url+`${phone}`)
   }
 
 }
+//add any to squiggles that aren't defined from json

@@ -1,7 +1,96 @@
-<br>
+<!-- <br>
 <input type= "text" placeholder="First Name" [(ngModel)]= "fname">
 <input type= "text" placeholder="Last Name" [(ngModel)]= "lname">
 <input type= "text" placeholder="Phone" [(ngModel)]= "phone">
 <input type= "text" placeholder="Email" [(ngModel)]= "email">
 <input type= "text" placeholder="Password" [(ngModel)]= "password">
-<button (click)="signup()">Click to Signup</button>
+<button (click)="signup()">Click to Signup</button> -->
+
+<!-- <div class="rightside">
+  <md-card fxLayout="row">
+    <mat-card-title>Signup</mat-card-title>
+    <mat-card-content>
+      <form>
+        <p>
+          <mat-form-field>
+            <input type="text" placeholder="First Name" [(ngModel)]="fname" />
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field>
+            <input type="text" placeholder="Last Name" [(ngModel)]="lname" />
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field>
+            <input type="text" placeholder="Phone" [(ngModel)]="phone" />
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field>
+            <input type="text" placeholder="Email" [(ngModel)]="email" />
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field>
+            <input type="text" placeholder="Password" [(ngModel)]="password" />
+          </mat-form-field>
+        </p>
+
+        <div class="button">
+          <button (click)="signup()">Click to Signup</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div> -->
+
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Signup</mat-card-title>
+    </mat-card-header>
+
+    <form class="example-form">
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input type="text" matInput placeholder="First Name" [(ngModel)]="fname" name="First Name"/>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input type="text" matInput placeholder="Last Name" [(ngModel)]="lname" name="lastname"/>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input type="phone" required matInput placeholder="Phone (X-XXX-XXX-XXXX)" [(ngModel)]="phone" name="phonenumber"/>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input type="email" required matInput placeholder="Email" [(ngModel)]="email" type="email" name="email"/>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input type="text" required matInput placeholder="Password" [(ngModel)]="password" name="password"/>
+        </mat-form-field>
+
+        <p>Are you a finder or seeker?</p>
+       
+        <mat-radio-group name="finderorseeker" aria-label="profileType">
+        <mat-radio-button value="seeker">Seeking applicants.</mat-radio-button>
+        <mat-radio-button value="finder">Finding a job.</mat-radio-button>
+      </mat-radio-group>
+
+      </mat-card-content>
+
+      <button mat-stroked-button color="accent" class="btn-block" (click)="verifynum()">Submit</button>
+
+    </form>
+  </mat-card>
+
+
+</div>

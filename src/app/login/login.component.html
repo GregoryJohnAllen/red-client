@@ -1,8 +1,47 @@
-<input type= "text" placeholder="Email" [(ngModel)]= "email">
+<!-- <input type= "text" placeholder="Email" [(ngModel)]= "email">
 <input type= "text" placeholder="Password" [(ngModel)]= "password">
 <button (click)="login()">Click to Login</button>
-<br>
-<br>
-<input type="file" name="image" id="image" (change)="selectImage($event)">
-<button (click)="onSubmit()">Click to Submit</button>
-<br>
+<br> -->
+
+<mat-grid-list cols="2" rowHeight="100%">
+  <mat-grid-tile colspan="2">
+    
+      <div class="ripple-background">
+      <div class="circle xxlarge shade1"></div>
+      <div class="circle xlarge shade2"></div>
+      <div class="circle large shade3"></div>
+      <div class="circle medium shade4"></div>
+      <div class="circle small shade5"></div>
+      </div> 
+
+
+<!-- rowHeight guttersize -->
+
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+
+    <form class="example-form">
+      <mat-card-content>
+
+        <mat-form-field class="example-full-width">
+          <input type="text" matInput placeholder="Email" [(ngModel)]="email" name="email"/>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input type="text" matInput placeholder="Password" [(ngModel)]="password" name="password"/>
+        </mat-form-field>
+
+      </mat-card-content>
+      <button mat-stroked-button color="primary" class="btn-block" (click)="login()">Go to Profile</button>
+    </form>
+  </mat-card>
+
+</div>
+
+</mat-grid-tile>
+
+</mat-grid-list>
