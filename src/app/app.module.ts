@@ -14,7 +14,9 @@ import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
-import { SignupComponent } from './signup/signup.component'
+import { SignupComponent } from './signup/signup.component';
+import { DialogComponent } from './dialog/dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { SignupComponent } from './signup/signup.component'
     FinderFeedComponent,
     HomeComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { SignupComponent } from './signup/signup.component'
     MatCardModule,
     HttpClientModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
