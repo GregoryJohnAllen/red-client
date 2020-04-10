@@ -13,11 +13,18 @@ import { FinderFeedComponent } from './finder-feed/finder-feed.component';
 import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
+<<<<<<< HEAD
 import { DialogComponent } from './dialog/dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 
+=======
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FinderformComponent } from './finderform/finderform.component';
+import { SeekerformComponent } from './seekerform/seekerform.component'
+ 
+>>>>>>> 81e8f32045a6d5c2addd43afe518e31b63ca25bd
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +35,12 @@ import { MatDialogModule } from '@angular/material/dialog';
     HomeComponent,
     LoginComponent,
     SignupComponent,
+<<<<<<< HEAD
     DialogComponent
+=======
+    FinderformComponent,
+    SeekerformComponent
+>>>>>>> 81e8f32045a6d5c2addd43afe518e31b63ca25bd
   ],
   imports: [
     BrowserModule,
@@ -38,7 +50,12 @@ import { MatDialogModule } from '@angular/material/dialog';
     HttpClientModule,
     MaterialModule,
     FormsModule,
+<<<<<<< HEAD
     MatDialogModule
+=======
+    FlexLayoutModule,
+    ReactiveFormsModule
+>>>>>>> 81e8f32045a6d5c2addd43afe518e31b63ca25bd
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -34,7 +34,12 @@ constructor(private http: HttpClient)
       localStorage.setItem("token", res.sessionToken);
       localStorage.setItem("profileType", "") //need to insert value
       },
-      err=> console.log(err)
+      err=> alert ("Incorrect username or password.")
+
+      // err=> console.log(err)
     );
     }
+
+
+
   }

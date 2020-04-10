@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NumverifyService } from '../numverify.service'
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-signup',
@@ -15,7 +16,7 @@ export class SignupComponent implements OnInit {
   password:string
   valid:boolean
 
-  constructor(private numverify: NumverifyService , private http: HttpClient)
+  constructor(private numverify: NumverifyService , private http: HttpClient, private snackbar: MatSnackBar )
 
   { }
 
@@ -56,6 +57,7 @@ export class SignupComponent implements OnInit {
            this.signup()
           } else {
             return alert ("Please provide a valid phone number.")
+            // this.snackbar.open("Please provide a valid phone number.")
           }
         }
       )

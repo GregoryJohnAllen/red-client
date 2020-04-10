@@ -15,7 +15,7 @@
   padding: 60px 50px 40px 50px;
   width: 100%;
   background: #fff;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   transform: scale(1);
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -36,7 +36,7 @@
   content: "";
   width: 100%;
   height: 30px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   position: absolute;
   top: -10px;
   background: rgba(255, 255, 255, .6);
@@ -77,7 +77,7 @@
 }
 
 .login-wrapper .mat-stroked-button {
-  border: 1px solid currentColor;
+  border: 2px solid currentColor;
   line-height: 54px;
   background: #FFF7FA;
 }
@@ -91,84 +91,65 @@
   color: #c2185b;
 }
 
-mat-grid-tile {
-  background-color: lightblue;
-}
 
 
 
-.circle{
-  position: absolute;
-  border-radius: 50%;
-  background: white;
-  animation: ripple 15s infinite;
-  box-shadow: 0px 0px 1px 0px #508fb9;
-}
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
 
-.small{
-  width: 200px;
-  height: 200px;
-  left: -100px;
-  bottom: -100px;
-}
-
-.medium{
-  width: 400px;
-  height: 400px;
-  left: -200px;
-  bottom: -200px;
-}
-
-.large{
-  width: 600px;
-  height: 600px;
-  left: -300px;
-  bottom: -300px;
-}
-
-.xlarge{
-  width: 800px;
-  height: 800px;
-  left: -400px;
-  bottom: -400px;
-}
-
-.xxlarge{
-  width: 1000px;
-  height: 1000px;
-  left: -500px;
-  bottom: -500px;
-}
-
-.shade1{
-  opacity: 0.2;
-}
-.shade2{
-  opacity: 0.5;
-}
-
-.shade3{
-  opacity: 0.7;
-}
-
-.shade4{
-  opacity: 0.8;
-}
-
-.shade5{
-  opacity: 0.9;
-}
-
-@keyframes ripple{
-  0%{
-    transform: scale(0.8);
-  }
+@media (min-width: 1281px) {
   
-  50%{
-    transform: scale(1.2);
-  }
   
-  100%{
-    transform: scale(0.8);
-  }
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  
 }

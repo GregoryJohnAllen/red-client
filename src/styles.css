@@ -5,12 +5,13 @@ html, body { height: 100%; }
 body { 
     margin: 0; 
     font-family: Roboto, "Helvetica Neue", sans-serif;
-    background-image: url(./assets/images/laptop-2298286.svg);
+    /* background-image: url(./assets/images/laptop-2298286.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1;
-    min-height: 100vh;}
+    min-height: 100vh;} */
+}
 
 nav ul a,
 nav .brand-logo {
