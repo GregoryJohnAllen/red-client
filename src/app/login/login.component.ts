@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http'
+import { APIURL } from '../../environments/environment.prod'
 
 
 @Component({
@@ -27,7 +28,7 @@ constructor(private http: HttpClient)
     };
 
     this.http
-    .post<any>("http://localhost:3000/user/login", formData)
+    .post<any>(`${APIURL}/user/login`, formData)
     .subscribe(
       res => {
       console.log(res);

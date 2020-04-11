@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NumverifyService } from '../numverify.service'
+import { APIURL } from '../../environments/environment.prod'
 
 @Component({
   selector: 'app-home',
@@ -33,7 +34,7 @@ export class HomeComponent implements OnInit {
     };
 
     this.http
-    .post<any>("http://localhost:3000/user/createuser", formData)
+    .post<any>(`${APIURL}/user/createuser`, formData)
     .subscribe(
       res => {
       console.log(res);

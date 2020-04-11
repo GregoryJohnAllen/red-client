@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 //import { MatCardModule } from '@angular/material/card'
 import {HttpClient, HttpHeaders} from '@angular/common/http'
+import { APIURL } from '../../environments/environment.prod'
 
 @Component({
   selector: 'app-seeker-profile',
@@ -31,7 +32,7 @@ constructor(private http: HttpClient)
     const reqHeaders=new HttpHeaders({Authorization: localStorage.getItem("token")
     });
 
-    this.http.post<any>("http://localhost:3000/seeker/create", formData, {headers:reqHeaders}).subscribe(
+    this.http.post<any>(`${APIURL}/seeker/create`, formData, {headers:reqHeaders}).subscribe(
       res => console.log(res),
       err=> console.log(err)
   );
