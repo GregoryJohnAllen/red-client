@@ -6,6 +6,7 @@ import {
 } from '@angular/router';
 import { AuthService } from './auth.service';
 import decode from 'jwt-decode';
+
 @Injectable()
 export class RoleGuardService implements CanActivate {
   constructor(public auth: AuthService, public router: Router) {}

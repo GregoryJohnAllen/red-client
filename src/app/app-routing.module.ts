@@ -8,24 +8,24 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { FinderProfileComponent } from './finder-profile/finder-profile.component';
 import { SeekerProfileComponent } from './seeker-profile/seeker-profile.component';
+import { SeekerformComponent } from './seekerform/seekerform.component';
+import { FinderformComponent } from './finderform/finderform.component';
 
+import { 
+  FormsService as FormJump 
+} from './forms.service';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/Home', pathMatch: 'full' },
-  { path: 'Home', component:  HomeComponent},
+  { path: '', component:  HomeComponent},
   { path: 'Signup', component:  SignupComponent},
   { path: 'Login', component: LoginComponent},
   { path: 'Finders', component: FinderProfileComponent, canActivate: [AuthGuard] },
   { path: 'Seekers', component: SeekerProfileComponent, canActivate: [AuthGuard] },
+  { path: 'seekerform', component: SeekerformComponent},
+  { path: 'finderform', component: FinderformComponent},
 
-  // { path: '', component: HomeComponent },
-  // { 
-  //   path: 'profile', 
-  //   component: ProfileComponent, 
-  //   canActivate: [AuthGuard] 
-  // },
-  // { 
+
   //   path: 'admin', 
   //   component: AdminComponent, 
   //   canActivate: [RoleGuard], 

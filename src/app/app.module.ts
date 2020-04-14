@@ -17,7 +17,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FinderformComponent } from './finderform/finderform.component';
-import { SeekerformComponent } from './seekerform/seekerform.component'
+import { SeekerformComponent } from './seekerform/seekerform.component';
+import { NavbarComponent } from './navbar/navbar.component'
+import { AuthGuardService } from './auth-guard.service';
+import { AuthService } from './auth.service';
+import { FinderService } from './finder.service';
+import { FormsService } from './forms.service';
+import { NumverifyService } from './numverify.service';
+import { SeekerService } from './seeker.service';
+import { RoleGuardService } from './role-guard.service';
+import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
  
 @NgModule({
   declarations: [
@@ -30,7 +39,8 @@ import { SeekerformComponent } from './seekerform/seekerform.component'
     LoginComponent,
     SignupComponent,
     FinderformComponent,
-    SeekerformComponent
+    SeekerformComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +53,9 @@ import { SeekerformComponent } from './seekerform/seekerform.component'
     FlexLayoutModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ AuthGuardService, AuthService, FinderService, FormsService, NumverifyService, SeekerService, RoleGuardService, JwtHelperService,{provide:JWT_OPTIONS,useValue:JWT_OPTIONS}
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

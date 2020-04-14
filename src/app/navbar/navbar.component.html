@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <h1>FinderSeeker</h1>
+    <div class="container">
+      <div class="box-logo rotate"></div>
+    </div>
+
+    <span class="example-fill-remaining-space"></span>
+
+
+    <div *ngIf="!deviceXs">
+      <a mat-button [routerLink]="'/Home'"> Home </a>
+      <a mat-button [routerLink]="'/Admin'"> Admin</a>
+      <a mat-button [routerLink]="'/Finders'"> Finders</a>
+      <a mat-button [routerLink]="'/Seekers'"> Seekers</a>
+    </div>
+
+  </mat-toolbar-row>
+  
+
+  <mat-toolbar-row *ngIf="deviceXs">
+    <div>
+      <a mat-button [routerLink]="'/Home'"> Home </a>
+      <a mat-button [routerLink]="'/Admin'"> Admin</a>
+      <a mat-button [routerLink]="'/Finders'"> Finders</a>
+      <a mat-button [routerLink]="'/Seekers'"> Seekers</a>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

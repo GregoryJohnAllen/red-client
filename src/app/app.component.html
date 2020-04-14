@@ -1,81 +1,26 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <h1>FinderSeeker</h1>
-    <div class="container">
-      <div class="box-logo rotate"></div>
+<app-navbar [deviceXs] = "deviceXs" ></app-navbar>
+
+<mat-grid-list cols="2" rowHeight="100%">
+
+
+
+  <mat-grid-tile colspan="2">
+    <div class="ripple-background">
+      <div class="circle xxlarge shade1"></div>
+      <div class="circle xlarge shade2"></div>
+      <div class="circle large shade3"></div>
+      <div class="circle medium shade4"></div>
+      <div class="circle small shade5"></div>
     </div>
-    <span class="example-fill-remaining-space"></span>
-    <div>
-      <a mat-button [routerLink]="'/Home'"> Home </a>
-      <!-- <a mat-button [routerLink]="'/Signup'"> Signup </a> -->
-      <a mat-button [routerLink]="'/Finders'"> Finders</a>
-      <a mat-button [routerLink]="'/Seekers'"> Seekers</a>
-      <a mat-button [routerLink]="'/Admin'"> Admin</a>
-    </div>
-  </mat-toolbar-row>
-</mat-toolbar>
 
-<!-- <nav mat-tab-nav-bar>
-  <a mat-tab-link
-  *ngFor="let link of navLinks"
-  [routerLink]="link.link"
-  routerLinkActive #rla="routerLinkActive"
-  [active]="rla.isActive">
-  </a>
-  </nav> -->
+    <router-outlet></router-outlet>
 
-<!-- <nav mat-tab-nav-bar value="accent">
-  <a mat-tab-link 
-  *ngFor="let link of links"
-     (click)="activeLink = link"
-     (click)="activeLink = link"
-     [active]="activeLink == link"> {{link}} </a>
-</nav> -->
+    <!-- <app-seekerform></app-seekerform>
+    <app-finderform></app-finderform> -->
 
-<!-- <nav>
-<mat-tab-group #compRef (selectedTabChange)="logChange(comp.Ref.selectedComp)">
-  <mat-tab label="Angular">Angular Content</mat-tab>
-  <mat-tab label="Angular">Angular Content</mat-tab>
-  <mat-tab label="Angular">Angular Content</mat-tab>
-</mat-tab-group>
-{{tabRef.selectedComp}}
-</nav> -->
+</mat-grid-tile>
 
-<!-- <h1>Finder Seeker</h1>
+</mat-grid-list>
 
-<div>
-  <app-finder-profile></app-finder-profile>
-</div>
-<div>
-  <app-seeker-profile></app-seeker-profile>
-</div>
-<div>
-  <app-news-feed></app-news-feed>
-</div>
-<div>
-  <app-finder-feed></app-finder-feed>
-</div> -->
 
-<!-- <div>
-  <button mat-button> Click Me! </button>
-  <button mat-icon-button> Icon </button>
-  <button mat-fab> Fab </button>
-  <button mat-mini-fab> Mini Fab </button>
-</div> -->
 
-<!-- <div>
-  <mat-button-toggle-group #toggleGroup="matButtonToggleGroup" multiple>
-  <mat-button-toggle value="Angular">Angular</mat-button-toggle>
-  <mat-button-toggle value="React">React</mat-button-toggle>
-  <mat-button-toggle value="Vue">Vue</mat-button-toggle>
-  </mat-button-toggle-group>
-  {{toggleGroup.value}}
-</div> -->
-
-<!-- <div>
-  <mat-icon>face</mat-icon>
-</div> -->
-
-<router-outlet></router-outlet>
-<!-- <app-login></app-login>
-<app-signup></app-signup> -->
