@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class FinderService {
 
   constructor(private http: HttpClient) { }
+  requestHeaders = new HttpHeaders( {'Content-Type': 'application/json', 'Authorization': localStorage.getItem('token')})
   //get all user profiles
   getAllProfiles() {
     return this.http.get(`http://localhost:3000/user/getall`)
@@ -16,17 +17,17 @@ export class FinderService {
   }
   //get all for Finder Profiles for news feed
   getFinder() {
-    return this.http.get("http://localhost:3000/seeker/")
+    return this.http.get("http://localhost:3000/seeker/", {headers: this.requestHeaders})
   }
   //get specific Finder profile that you want to view
-  getFinderProfile(userid) {
-    return this.http.get(`http://localhost:3000/seeker/${userid}`)
+  getFinderProfile() {
+    return this.http.get(`http://localhost:3000/seeker/getprofile`, {headers: this.requestHeaders})
   }
-  getMySeeker(userid) {
-    return this.http.get(`http://localhost:3000/finder/${userid}`)
+  getMySeeker() {
+    return this.http.get(`http://localhost:3000/finder/getprofile`, {headers: this.requestHeaders})
   }
   //update by id for the seeker profile that you are logged into
-  updateSeeker(userid) {
-    return this.http.get(`http://localhost:3000/seeker/update/${userid}`)         
+  updateSeeker() {
+    return this.http.get(`http://localhost:3000/seeker/update/`, {headers: this.requestHeaders})         
   }
 }
