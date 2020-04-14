@@ -9,6 +9,7 @@ import { FinderService } from '../finder.service';
 })
 export class NewsFeedComponent implements OnInit {
   profiles: any
+  user: any
 
   constructor(private finderFetch:FinderService) { }
 
@@ -16,10 +17,13 @@ export class NewsFeedComponent implements OnInit {
     this.getProfiles()
   }
 
+  //get all finder profiles to display
   getProfiles() {
     this.finderFetch.getFinder().subscribe((data) => {
       this.profiles = data
     })
   }
+
+  
 
 }
