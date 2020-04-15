@@ -5,22 +5,29 @@
     <mat-form-field appearance="fill">
         <mat-label>Preferred Traits:</mat-label>
         <br>
-        <textarea matInput></textarea>
+        <textarea matInput [(ngModel)] = "predisktraits" name = "predisktraits"></textarea>
     </mat-form-field>
-    <!-- Button Here to submit skills to unordered list area below
+    <!-- Button Here to submit traits to unordered list area below
     <ul></ul> -->
+    <mat-form-field appearance="fill">
+        <mat-label>Previous Positions Filled</mat-label>
+        <br>
+        <textarea matInput [(ngModel)] = "prevjobs" name = "prevjobs"></textarea>
+    </mat-form-field>
     <mat-form-field appearance="fill">
         <mat-label>Preferred Skills</mat-label>
         <br>
-        <textarea matInput></textarea>
+        <textarea matInput [(ngModel)] = "prefskills" name="prefskills"></textarea>
     </mat-form-field>
     <!-- Button Here to submit skills to unordered list area below
     <ul></ul> -->
     <mat-form-field appearance="fill">
         <mat-label>Companies Recruited For:</mat-label>
         <br>
-        <textarea matInput></textarea>
+        <textarea matInput [(ngModel)] = "companies" name="companies"></textarea>
     </mat-form-field>
-    <!-- Button Here to submit skills to unordered list area below
+    <!-- Button Here to submit companies to unordered list area below
     <ul></ul> -->
 </div>
+
+<button (click) = "updateSeeker()">Click Me</button>
