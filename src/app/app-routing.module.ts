@@ -10,6 +10,8 @@ import { FinderProfileComponent } from './finder-profile/finder-profile.componen
 import { SeekerProfileComponent } from './seeker-profile/seeker-profile.component';
 import { SeekerformComponent } from './seekerform/seekerform.component';
 import { FinderformComponent } from './finderform/finderform.component';
+import { FinderFeedComponent } from './finder-feed/finder-feed.component'
+import { NewsFeedComponent } from './news-feed/news-feed.component'
 
 import { 
   FormsService as FormJump 
@@ -24,6 +26,8 @@ const routes: Routes = [
   { path: 'Seekers', component: SeekerProfileComponent, canActivate: [AuthGuard] },
   { path: 'seekerform', component: SeekerformComponent},
   { path: 'finderform', component: FinderformComponent},
+  { path: 'finderfeed', component: FinderFeedComponent},
+  { path: 'newsfeed', component: NewsFeedComponent},
 
 
   //   path: 'admin', 
