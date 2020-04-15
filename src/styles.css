@@ -114,8 +114,16 @@ nav li a {
   color: #c2185b !important; }
 
 mat-grid-tile {
-  background-color: rgb(124, 124, 124);}  
-  /* background-color: lightblue; */
+  background-image: url("./assets/images/blur-bottle-bright-building-273238.jpg");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
   
    .circle{
     position: absolute;

@@ -1,3 +1,20 @@
+html,
+body {
+  height: 100%;
+  margin:0;
+
+    /* The image used */
+    background-image: url("../assets/images/blur-bottle-bright-building-273238.jpg");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
 mat-toolbar-row {
   justify-content: space-between;
   position: absolute;
@@ -14,12 +31,7 @@ mat-toolbar-row {
 
 
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
+
 
 
 
