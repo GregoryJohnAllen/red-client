@@ -13,8 +13,8 @@ export class SeekerService {
     return this.http.get(`http://localhost:3000/user/getall`)
   }
   //get the user profile of yourself
-  getMyUser(userid) {
-    return this.http.get(`http://localhost:3000/user/${userid}`)
+  getMyUser(userid):any {
+    return this.http.get(`http://localhost:3000/user/getmyprofile/${userid}`)
   }
 
   //get all for Seeker Profiles for news feed
@@ -25,7 +25,7 @@ export class SeekerService {
   getSeekerProfile() {
     return this.http.get(`http://localhost:3000/finder/getprofile`, {headers: this.requestHeaders})
   }
-  getMyFinder() {
+  getMyFinder():any {
     return this.http.get(`http://localhost:3000/seeker/getprofile`, {headers: this.requestHeaders})
   }
   //update by id for the finder profile that you are logged into

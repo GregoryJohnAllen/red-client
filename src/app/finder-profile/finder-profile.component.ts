@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-//import { MatCardModule } from '@angular/material/card'
+import { SeekerService } from '../seeker.service';
+
 
 @Component({
   selector: 'app-finder-profile',
@@ -7,10 +8,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./finder-profile.component.css']
 })
 export class FinderProfileComponent implements OnInit {
-  finderProfile = 'finderProfile';
-  constructor() { }
+  profile:any
+  user:any
+  constructor(private seekerFetch:SeekerService) { }
 
   ngOnInit(): void {
+
+  this.showMyProfile()
+
   }
 
-}
+  showMyProfile() {
+this.seekerFetch.getMyFinder().subscribe((formdata)=>{
+  console.log(formdata)
+  this.seekerFetch.getMyUser(formdata.userid).subscribe((formdata)=>{
+    console.log(formdata)
+    this.user=formdata
+  })
+  this.profile=formdata
+});
+  }
+
+
+  }
