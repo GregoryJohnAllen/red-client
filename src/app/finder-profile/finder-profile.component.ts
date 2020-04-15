@@ -29,5 +29,30 @@ this.seekerFetch.getMyFinder().subscribe((formdata)=>{
 });
   }
 
+  // feed(){
+  //   let formData = {
+  //   user: {
+  //   fname: this.fname,
+  //   lname: this.lname,
+  //   phone: this.phone,
+  //   email: this.email,
+  //   password: this.password,
+  //   profiletype: this.profiletype
+  //   }
+  //   };
+
+  //   this.http
+  //   .post<any>("http://localhost:3000/user/createuser", formData)
+  //   .subscribe(
+  //     res => {
+  //     console.log(res);
+  //     console.log('this is the response: '+ res + res.sessionToken + res.profileType);
+  //     localStorage.setItem("token", res.sessionToken);
+  //     localStorage.setItem("profiletype", res.profileType) 
+  //     this.router.navigateByUrl(`/${res.profileType}form`)
+  //   },
+  //     err=> console.log(err)
+  //   );
+    // }
 
   }

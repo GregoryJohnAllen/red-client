@@ -53,7 +53,7 @@ import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
     FlexLayoutModule,
     ReactiveFormsModule
   ],
-  providers: [ AuthGuardService, AuthService, FinderService, FormsService, NumverifyService, SeekerService, RoleGuardService, JwtHelperService,{provide:JWT_OPTIONS,useValue:JWT_OPTIONS}
+  providers: [ AuthGuardService, AuthService, FinderService, FormsService, NumverifyService, SeekerService, RoleGuardService, JwtHelperService,{provide:JWT_OPTIONS,useValue:JWT_OPTIONS},
 
   ],
   bootstrap: [AppComponent]

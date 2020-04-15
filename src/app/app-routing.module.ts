@@ -22,12 +22,13 @@ const routes: Routes = [
   { path: '', component:  HomeComponent},
   { path: 'Signup', component:  SignupComponent},
   { path: 'Login', component: LoginComponent},
-  { path: 'Finders', component: FinderProfileComponent, canActivate: [AuthGuard] },
-  { path: 'Seekers', component: SeekerProfileComponent, canActivate: [AuthGuard] },
+  { path: 'finders', component: FinderProfileComponent, canActivate: [AuthGuard] },
+  { path: 'seekers', component: SeekerProfileComponent, canActivate: [AuthGuard] },
   { path: 'seekerform', component: SeekerformComponent},
   { path: 'finderform', component: FinderformComponent},
   { path: 'finderfeed', component: FinderFeedComponent},
   { path: 'newsfeed', component: NewsFeedComponent},
+  // { path: 'About', component:AboutComponent},
 
 
   //   path: 'admin', 

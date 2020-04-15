@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NumverifyService } from '../numverify.service'
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
 @Component({
@@ -17,9 +16,8 @@ export class SignupComponent implements OnInit {
   password:string
   profiletype:string
   valid:boolean
-  profileType: string;
 
-  constructor(private numverify: NumverifyService , private http: HttpClient, private snackbar: MatSnackBar, private router: Router )
+  constructor(private numverify: NumverifyService , private http: HttpClient, private router: Router )
 
   { }
 

@@ -1,4 +1,6 @@
 import { Component, OnInit, Input} from '@angular/core';
+import { AuthService } from '../auth.service'
+
 
 @Component({
   selector: 'app-navbar',
@@ -7,5 +9,7 @@ import { Component, OnInit, Input} from '@angular/core';
 })
 export class NavbarComponent {
 @Input() deviceXs:boolean
+
+constructor(public authservice:AuthService) {}
 
 }
