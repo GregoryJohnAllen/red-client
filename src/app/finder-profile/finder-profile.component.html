@@ -1,29 +1,30 @@
 
-
-    <mat-card>
+<div class='container'>
+  <div class="row">
+    <div class="column">
+    <mat-card class="box">
       <mat-card-header>
         <mat-card-title>Welcome, {{user.fname}}</mat-card-title>
-        <mat-card-subtitle>name of finder</mat-card-subtitle>
       </mat-card-header>
-      <mat-card-content
-        >{{profile.userid}}</mat-card-content
-      >
-      <button mat-stroked-button (click)="updateInfo()">Update Button</button>
+      <br>
+      <p>Disc Ranking: {{profile.diskrank}}</p>
+      <p>Employment Type: {{profile.employtype}}</p>
+      <p>About Me: {{profile.about}}</p>
+      <p>My Skills: {{profile.skills}}</p>
+      <p>My Desired Salary: {{profile.skills}}</p>
+ 
+     <button mat-raised-button class="updatecolor" (click)="updateInfo()">Update</button>
+      <button mat-raised-button class="feedcolor" (click)="feed()">Find Seekers</button>
+
+
     </mat-card>
+  </div>
+  </div>
+  </div>
+
   
 
-
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>Welcome, {{user.fname}}</mat-card-title>
-        <mat-card-subtitle>name of finder</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content
-        >{{profile.userid}}</mat-card-content
-      >
-      <button mat-stroked-button (click)="feed()">Find Seekers</button>
-    </mat-card>
-
+  
 
 
 

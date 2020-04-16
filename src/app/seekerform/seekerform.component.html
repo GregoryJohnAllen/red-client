@@ -1,4 +1,5 @@
-<div class = "title">Seeker Sign up Form</div>
+<mat-card class="box">
+<mat-card-title>Seeker Sign up Form</mat-card-title>
 <p>Please fill in the below information of the preferred details you're seeking in a finder.</p>
 <br>
 <div class="seeker-form">
@@ -30,6 +31,8 @@
     <ul></ul> -->
 </div>
 
-<button (click) = "updateSeeker()">Click Me</button>
+<button mat-raised-button class="clickmecolor" (click) = "updateSeeker()">Submit</button>
 
-<button (click) = "goToProfile()">Go To Profile</button>
+<button mat-raised-button class="profilecolor" (click) = "goToProfile()">Go To Profile</button>
+
+</mat-card>

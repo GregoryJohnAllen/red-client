@@ -1,3 +1,5 @@
+<mat-card class="box">
+
 <div class = 'title'>Finder Sign up Form</div>
 <br>
 <p>Your answers to the following questions will help complete your profile to allow seekers to search and review them. The DISC profile will help seekers understand the type of worker you are and how you would fit in  </p>
@@ -48,6 +50,8 @@
     max="150000">Desired Salary</mat-slider>
 </div>
 
-<button (click) = "updateFinder()">Click Me</button>
+<button mat-raised-button class="clickmecolor" (click) = "updateFinder()">Submit</button>
 
-<button (click) = "goToProfile()">Go To Profile</button>
+<button mat-raised-button class="profilecolor" (click) = "goToProfile()">Go To Profile</button>
+
+</mat-card>

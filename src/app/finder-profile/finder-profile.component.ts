@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http'
 import { SeekerService } from '../seeker.service';
 import { Router } from '@angular/router';
 
@@ -20,7 +21,7 @@ export class FinderProfileComponent implements OnInit {
   usertype=localStorage.getItem("profiletype")
 
 
-  constructor(private seekerFetch:SeekerService, private router:Router) { 
+  constructor(private http: HttpClient, private seekerFetch:SeekerService, private router:Router) { 
 
   }
 
@@ -44,7 +45,7 @@ this.seekerFetch.getMyFinder().subscribe((formdata)=>{
     if (this.usertype=="admin"){
       return
     }
-    let url = this.usertype=="seeker" ? "/finderform" : "/seekerform"
+    let url = this.usertype=="seeker" ? "/seekerform" : "/finderform"
     this.router.navigateByUrl(url)
   }
 

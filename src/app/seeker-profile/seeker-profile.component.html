@@ -1,6 +1,30 @@
-<mat-card>
+
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Welcome!</mat-card-title>
+      </mat-card-header>
+      <p>I prefer these disc traits: {{profile.predisktraits}}</p>
+      <p>These are the jobs I've filled: {{profile.prevjobs}}</p>
+      <p>I prefer these skills: {{profile.prefskills}}</p>
+      <p>This is my company: {{profile.companies}}</p>
+
+      <button mat-stroked-button class="updatecolor" (click)="updateInfo()">Update</button>
+      <button mat-stroked-button class="feedcolor" (click)="feed()">Seek Finders</button>
+
+    </mat-card>
+  
+
+
+
+
+<!-- (click)="feed()" -->
+
+
+
+<!-- <mat-card>
   <mat-card-header>
-    <mat-card-title>{{seekerProfile}}</mat-card-title>
+    <mat-card-title>Welcome, {{user.fname}}</mat-card-title>
     <mat-card-subtitle>name of seeker</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content
@@ -16,4 +40,4 @@
 <input type="file" name="image" id="image" (change)="selectImage($event)">
 <button (click)="onSubmit()">Click to Submit</button>
 <br>
-
+ -->
