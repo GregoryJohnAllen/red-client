@@ -1,5 +1,9 @@
 .profile-card {
-  max-width: 400px;
+  width: 500px;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+h3 {
+  padding-top: 50px;
 }
