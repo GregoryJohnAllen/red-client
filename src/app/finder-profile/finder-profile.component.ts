@@ -8,8 +8,8 @@ import { SeekerService } from '../seeker.service';
   styleUrls: ['./finder-profile.component.css']
 })
 export class FinderProfileComponent implements OnInit {
-  profile:any
-  user:any
+  profile={userid:""}
+  user={fname:"",lname:"", userid:""}
   constructor(private seekerFetch:SeekerService) { }
 
   ngOnInit(): void {
