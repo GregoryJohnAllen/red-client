@@ -14,7 +14,7 @@ export class FinderService {
     return this.http.get(`${APIURL}/user/getall`)
   }
   getMyUser(userid):any {
-    return this.http.get(`${APIURL}/user/getprofile/${userid}`)
+    return this.http.get(`${APIURL}/user/getmyprofile/${userid}`)
   }
   //get all for Finder Profiles for news feed
   getFinder() {
