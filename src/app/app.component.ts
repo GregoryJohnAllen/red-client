@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { MediaObserver, MediaChange } from '@angular/flex-layout'
 import { Subscription } from 'rxjs'
+import { AuthService } from './auth.service'
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ export class AppComponent implements OnInit, OnDestroy {
   title= "flex-nav";
   mediaSub: Subscription;
   deviceXs: boolean;
-  constructor (public mediaObserver: MediaObserver) {}
+  constructor (public mediaObserver: MediaObserver, public authservce:AuthService) {}
   ngOnInit () {
   this.mediaObserver.media$.subscribe(
     (results:MediaChange) => {

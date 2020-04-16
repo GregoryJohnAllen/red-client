@@ -16,18 +16,21 @@ import { NewsFeedComponent } from './news-feed/news-feed.component'
 import { 
   FormsService as FormJump 
 } from './forms.service';
+import { FeedControlComponent } from './feed-control/feed-control.component';
 
 
 const routes: Routes = [
   { path: '', component:  HomeComponent},
   { path: 'Signup', component:  SignupComponent},
   { path: 'Login', component: LoginComponent},
-  { path: 'Finders', component: FinderProfileComponent, canActivate: [AuthGuard] },
-  { path: 'Seekers', component: SeekerProfileComponent, canActivate: [AuthGuard] },
+  { path: 'finders', component: FinderProfileComponent, canActivate: [AuthGuard] },
+  { path: 'seekers', component: SeekerProfileComponent, canActivate: [AuthGuard] },
   { path: 'seekerform', component: SeekerformComponent},
   { path: 'finderform', component: FinderformComponent},
   { path: 'finderfeed', component: FinderFeedComponent},
   { path: 'newsfeed', component: NewsFeedComponent},
+  { path: 'feedcontrol', component: FeedControlComponent},
+
 
 
   //   path: 'admin', 

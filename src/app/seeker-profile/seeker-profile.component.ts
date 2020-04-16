@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 //import { MatCardModule } from '@angular/material/card'
 import {HttpClient, HttpHeaders} from '@angular/common/http'
+import { Router } from '@angular/router';
+import { FinderService } from '../finder.service'
+
 
 @Component({
   selector: 'app-seeker-profile',
@@ -8,13 +11,18 @@ import {HttpClient, HttpHeaders} from '@angular/common/http'
   styleUrls: ['./seeker-profile.component.css']
 })
 export class SeekerProfileComponent implements OnInit {
-  seekerProfile = 'seekerProfile';
-  email:string
+email:string
 password:string
+user:any
+profile:any
+usertype=localStorage.getItem("profiletype")
 image
-constructor(private http: HttpClient)
+constructor(private http: HttpClient, private router:Router, private finderFetch: FinderService)
 {}
   ngOnInit(): void {
+
+    this.showMyProfile()
+
   }
 
   selectImage(event){
@@ -36,6 +44,29 @@ constructor(private http: HttpClient)
       err=> console.log(err)
   );
 }
+
+showMyProfile() {
+  this.finderFetch.getMySeeker().subscribe((formdata)=>{
+    console.log(formdata)
+    this.finderFetch.getMyUser(formdata.userid).subscribe((formdata)=>{
+      console.log(formdata)
+      this.user=formdata
+    })
+    this.profile=formdata
+  });
+    }
+    updateInfo(){
+      if (this.usertype=="admin"){
+        return
+      }
+      let url = this.usertype=="seeker" ? "/seekerform" : "/finderform"
+      this.router.navigateByUrl(url)
+    }
+  
+    feed(){
+      this.router.navigateByUrl(`/finderfeed`)
+  
+       };
 
 }
 //where to put the MatCardModule within this componenet, in constructor or ngOnIt??

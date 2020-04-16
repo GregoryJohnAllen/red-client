@@ -12,8 +12,8 @@ export class FinderService {
   getAllProfiles() {
     return this.http.get(`http://localhost:3000/user/getall`)
   }
-  getMyUser(userid) {
-    return this.http.get(`http://localhost:3000/user/${userid}`)
+  getMyUser(userid):any {
+    return this.http.get(`http://localhost:3000/user/getprofile/${userid}`)
   }
   //get all for Finder Profiles for news feed
   getFinder() {
@@ -23,7 +23,7 @@ export class FinderService {
   getFinderProfile() {
     return this.http.get(`http://localhost:3000/seeker/getprofile`, {headers: this.requestHeaders})
   }
-  getMySeeker() {
+  getMySeeker() :any {
     return this.http.get(`http://localhost:3000/finder/getprofile`, {headers: this.requestHeaders})
   }
   //update by id for the seeker profile that you are logged into

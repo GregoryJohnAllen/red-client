@@ -29,7 +29,16 @@ export class SeekerService {
     return this.http.get(`http://localhost:3000/seeker/getprofile`, {headers: this.requestHeaders})
   }
   //update by id for the finder profile that you are logged into
-  updateFinder(userid) {
-    return this.http.get(`http://localhost:3000/finder/update/${userid}`, {headers: this.requestHeaders})         
+  updateFinder(formdata) {
+    let body = {finder: {
+    diskrank: formdata.diskrank,
+    employtype: formdata.employtype,
+    about: formdata.about,
+    skills: formdata.skills,
+    salary: formdata.salary,
+    projects: formdata.projects
+    }}
+    
+    return this.http.put(`http://localhost:3000/finder/update/`, body , {headers: this.requestHeaders})         
   }
 }
