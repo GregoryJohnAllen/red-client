@@ -1,35 +1,15 @@
-.login-wrapper {
-  height: 100%;
-}
-
 
 .box {
-  position: relative;
-  top: 0;
-  opacity: 1;
-  width: 100%;
-  background: white;
-  transform: scale(1);
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  z-index: 5;
-  max-width: 330px;
+  background: lightgray;
+  padding: 50px;
 } 
 
-
-/* .login-wrapper .example-form {
-  min-width: 100%;
-  max-width: 300px;
-  width: 100%;
-} */
-
-.login-wrapper .example-full-width,
-.login-wrapper .btn-block {
+.btn-block {
   width: 100%;
   color: #c2185b;
 }
 
-.login-wrapper mat-card-header {
+mat-card-header {
   text-align: center;
   width: 100%;
   display: block;
@@ -37,25 +17,17 @@
   color: #c2185b;
 }
 
-.login-wrapper mat-card-header mat-card-title {
+mat-card-header mat-card-title {
   font-size: 30px;
   margin: 0;
 }
 
-.mat-card {
-  background: white;
-}
 
-.login-wrapper .mat-stroked-button {
+.mat-stroked-button {
   border: 2px solid currentColor;
   line-height: 54px;
   background: #FFF7FA;
 }
-
-/* .login-wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {
-  padding: 0.8375em 0;
-  color: gray;
-} */
 
 .mat-form-field-empty.mat-form-field-label {
   color: gray;
@@ -63,22 +35,13 @@
 
 .mat-input-element .mat-focused .mat-form-field-underline { background: #c2185b; }
 
-::ng-deep .mat-radio-label-content {
-  color: #c2185b;
+.mat-form-field-underline {
+  background-color:  #c2185b;
 }
 
 p {
   color: #c2185b;
 }
 
-::ng-deep .mat-radio-outer-circle {
-background: lightblue
-}
 
-::ng-deep .mat-radio-inner-circle {
-  background: #c2185b;
-  }
 
-.signin {
-  padding: "25px"
-}

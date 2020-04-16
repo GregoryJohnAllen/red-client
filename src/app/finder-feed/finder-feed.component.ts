@@ -8,6 +8,7 @@ import { SeekerService } from '../seeker.service';
 })
 export class FinderFeedComponent implements OnInit {
   profiles: any
+  user: any
 
   constructor(private seekerFetch:SeekerService) { }
 

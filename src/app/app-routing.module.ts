@@ -8,24 +8,31 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { FinderProfileComponent } from './finder-profile/finder-profile.component';
 import { SeekerProfileComponent } from './seeker-profile/seeker-profile.component';
+import { SeekerformComponent } from './seekerform/seekerform.component';
+import { FinderformComponent } from './finderform/finderform.component';
+import { FinderFeedComponent } from './finder-feed/finder-feed.component'
+import { NewsFeedComponent } from './news-feed/news-feed.component'
 
+import { 
+  FormsService as FormJump 
+} from './forms.service';
+import { FeedControlComponent } from './feed-control/feed-control.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/Home', pathMatch: 'full' },
-  { path: 'Home', component:  HomeComponent},
+  { path: '', component:  HomeComponent},
   { path: 'Signup', component:  SignupComponent},
   { path: 'Login', component: LoginComponent},
-  { path: 'Finders', component: FinderProfileComponent, canActivate: [AuthGuard] },
-  { path: 'Seekers', component: SeekerProfileComponent, canActivate: [AuthGuard] },
+  { path: 'finders', component: FinderProfileComponent, canActivate: [AuthGuard] },
+  { path: 'seekers', component: SeekerProfileComponent, canActivate: [AuthGuard] },
+  { path: 'seekerform', component: SeekerformComponent},
+  { path: 'finderform', component: FinderformComponent},
+  { path: 'finderfeed', component: FinderFeedComponent},
+  { path: 'newsfeed', component: NewsFeedComponent},
+  { path: 'feedcontrol', component: FeedControlComponent},
 
-  // { path: '', component: HomeComponent },
-  // { 
-  //   path: 'profile', 
-  //   component: ProfileComponent, 
-  //   canActivate: [AuthGuard] 
-  // },
-  // { 
+
+
   //   path: 'admin', 
   //   component: AdminComponent, 
   //   canActivate: [RoleGuard], 

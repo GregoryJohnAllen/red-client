@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http'
 import { APIURL } from '../../environments/environment.prod'
+import { Router } from '@angular/router'
 
 
 @Component({
@@ -12,8 +13,9 @@ export class LoginComponent implements OnInit {
 
 email:string
 password:string
+profiletype:string
 image
-constructor(private http: HttpClient)
+constructor(private http: HttpClient, private router:Router)
 { }
 
   ngOnInit(): void {}
@@ -22,8 +24,9 @@ constructor(private http: HttpClient)
     login(){
     let formData = {
     user: {
-    email: this.email,
-    password: this.password
+      email: this.email,
+      password: this.password,
+      profiletype: this.profiletype
     }
     };
 
@@ -31,16 +34,15 @@ constructor(private http: HttpClient)
     .post<any>(`${APIURL}/user/login`, formData)
     .subscribe(
       res => {
-      console.log(res);
-      localStorage.setItem("token", res.sessionToken);
-      localStorage.setItem("profileType", "") //need to insert value
+        console.log(res);
+        console.log('this is the response: ' + res.user.profiletype);
+        localStorage.setItem("token", res.sessionToken);
+        localStorage.setItem("profiletype", res.user.profiletype)
+        this.router.navigateByUrl(`/${res.user.profiletype}s`)
       },
       err=> alert ("Incorrect username or password.")
 
       // err=> console.log(err)
     );
     }
-
-
-
   }
