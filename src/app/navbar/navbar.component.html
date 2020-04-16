@@ -9,7 +9,8 @@
 
 
     <div *ngIf="!deviceXs">
-      <a mat-button [routerLink]="'/About'"> About </a>
+      <a *ngIf="usertype=='seeker'" mat-button [routerLink]="'/seekers'"> My Profile </a>
+      <a *ngIf="usertype=='finder'" mat-button [routerLink]="'/finders'"> My Profile </a>
       <a mat-button [routerLink]="'/Admin'"> Admin</a>
       <a mat-button [routerLink]="'/Logout'" style="cursor:pointer" *ngIf="authservice.loggedIn()" (click)="authservice.logoutUser()"> Logout</a>
     </div>
@@ -19,7 +20,8 @@
 
   <mat-toolbar-row *ngIf="deviceXs">
     <div>
-      <a mat-button [routerLink]="'/About'"> About </a>
+      <a *ngIf="usertype=='seeker'" mat-button [routerLink]="'/seekers'"> My Profile </a>
+      <a *ngIf="usertype=='finder'" mat-button [routerLink]="'/finders'"> My Profile </a>
       <a mat-button [routerLink]="'/Admin'"> Admin</a>
       <a mat-button [routerLink]="'/Logout'"> Logout</a>
     </div>

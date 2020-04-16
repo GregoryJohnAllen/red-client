@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SeekerService } from '../seeker.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,7 +11,18 @@ import { SeekerService } from '../seeker.service';
 export class FinderProfileComponent implements OnInit {
   profile:any
   user:any
-  constructor(private seekerFetch:SeekerService) { }
+  diskrank:any
+  employtype:any
+  about:any
+  skills:any
+  salary:any
+  projects:any
+  usertype=localStorage.getItem("profiletype")
+
+
+  constructor(private seekerFetch:SeekerService, private router:Router) { 
+
+  }
 
   ngOnInit(): void {
 
@@ -29,30 +41,22 @@ this.seekerFetch.getMyFinder().subscribe((formdata)=>{
 });
   }
 
-  // feed(){
-  //   let formData = {
-  //   user: {
-  //   fname: this.fname,
-  //   lname: this.lname,
-  //   phone: this.phone,
-  //   email: this.email,
-  //   password: this.password,
-  //   profiletype: this.profiletype
-  //   }
-  //   };
+  feed(){
+    this.router.navigateByUrl(`/newsfeed`)
 
-  //   this.http
-  //   .post<any>("http://localhost:3000/user/createuser", formData)
-  //   .subscribe(
-  //     res => {
-  //     console.log(res);
-  //     console.log('this is the response: '+ res + res.sessionToken + res.profileType);
-  //     localStorage.setItem("token", res.sessionToken);
-  //     localStorage.setItem("profiletype", res.profileType) 
-  //     this.router.navigateByUrl(`/${res.profileType}form`)
-  //   },
-  //     err=> console.log(err)
-  //   );
-    // }
+     };
 
+  updateInfo(){
+    if (this.usertype=="admin"){
+      return
+    }
+    let url = this.usertype=="seeker" ? "/finderform" : "/seekerform"
+    this.router.navigateByUrl(url)
   }
+
+  // updateProfile(userid){
+  //   this.seekerFetch.updateFinder(userid,{finder:{diskrank:this.diskrank, employtype:this.employtype, about:this.about, skills:this.skills, salary:this.salary, project:this.projects}}).subscribe((formdata)=>{
+  //     console.log(formdata)
+  //    });
+  //     }
+   }

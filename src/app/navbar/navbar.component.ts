@@ -9,7 +9,7 @@ import { AuthService } from '../auth.service'
 })
 export class NavbarComponent {
 @Input() deviceXs:boolean
-
+usertype=localStorage.getItem("profiletype")
 constructor(public authservice:AuthService) {}
 
 }
