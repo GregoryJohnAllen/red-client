@@ -28,7 +28,19 @@ export class FinderformComponent implements OnInit {
     return value;
   }
   constructor(private seekerFetch:SeekerService, private router:Router) {
+this.populatefields()
+   }
 
+   populatefields(){
+     this.seekerFetch.getMyFinder().subscribe(data => {
+       console.log(data)
+      this.diskrank = data.diskrank
+      // this.employtype = 
+      this.about = data.about
+      this.skills = data.skills
+      this.salary = data.salary
+      this.projects = data.projects
+      })
    }
 
   updateFinder(){

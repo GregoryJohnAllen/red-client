@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SeekerService } from '../seeker.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,7 +11,8 @@ import { SeekerService } from '../seeker.service';
 export class FinderProfileComponent implements OnInit {
   profile={userid:""}
   user={fname:"",lname:"", userid:""}
-  constructor(private seekerFetch:SeekerService) { }
+  usertype=localStorage.getItem("profiletype")
+  constructor(private seekerFetch:SeekerService, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -27,6 +29,13 @@ this.seekerFetch.getMyFinder().subscribe((formdata)=>{
   })
   this.profile=formdata
 });
+  }
+  updateInfo(){
+    if (this.usertype=="admin"){
+      return
+    }
+    let url = this.usertype=="seeker" ? "/finderform" : "/seekerform"
+    this.router.navigateByUrl(url)
   }
 
 

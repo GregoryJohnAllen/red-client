@@ -1,0 +1,7 @@
+<div *ngIf="profiletype == 'seeker'|| profiletype == 'admin'">
+<app-news-feed></app-news-feed>
+</div>
+
+<div *ngIf="profiletype == 'finder' || profiletype == 'admin'">
+    <app-finder-feed></app-finder-feed>
+    </div>

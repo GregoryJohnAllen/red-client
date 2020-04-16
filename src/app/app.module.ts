@@ -27,6 +27,7 @@ import { NumverifyService } from './numverify.service';
 import { SeekerService } from './seeker.service';
 import { RoleGuardService } from './role-guard.service';
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
+import { FeedControlComponent } from './feed-control/feed-control.component';
  
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
     SignupComponent,
     FinderformComponent,
     SeekerformComponent,
-    NavbarComponent
+    NavbarComponent,
+    FeedControlComponent
   ],
   imports: [
     BrowserModule,
