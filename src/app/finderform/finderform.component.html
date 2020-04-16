@@ -2,45 +2,52 @@
 <br>
 <p>Your answers to the following questions will help complete your profile to allow seekers to search and review them. The DISC profile will help seekers understand the type of worker you are and how you would fit in  </p>
 <br>
-<div class="form-container">
+<div class="form-container" >
+
+  
     <mat-form-field>
         <mat-label>DISC Ranking</mat-label>
-        <mat-select>
+        <mat-select [(ngModel)] = "diskrank" name = "diskrank">
           <mat-option>Select Your Top Ranking</mat-option>
-          <mat-option value="option1">D</mat-option>
-          <mat-option value="option2">I</mat-option>
-          <mat-option value="option3">S</mat-option>
-          <mat-option value="option4">C</mat-option>
+          <mat-option value="D">D</mat-option>
+          <mat-option value="I">I</mat-option>
+          <mat-option value="S">S</mat-option>
+          <mat-option value="C">C</mat-option>
         </mat-select>
       </mat-form-field>
     <br>
     <br>
-    <mat-checkbox>Full-Time</mat-checkbox>
-    <mat-checkbox>Part-Time</mat-checkbox>
-    <mat-checkbox>Contract</mat-checkbox>
-    <mat-checkbox>Temporary</mat-checkbox>
+    <mat-checkbox [(ngModel)] = "fulltime" name = "fulltime">Full-Time</mat-checkbox>
+    <mat-checkbox [(ngModel)] = "parttime" name = "parttime">Part-Time</mat-checkbox>
+    <mat-checkbox [(ngModel)] = "contract" name = "contract">Contract</mat-checkbox>
+    <mat-checkbox [(ngModel)] = "temp" name = "temp">Temporary</mat-checkbox>
     <br>
     <br>
     <mat-form-field appearance="fill">
         <mat-label>About Me:</mat-label>
         <br>
-        <textarea matInput></textarea>
+        <textarea matInput [(ngModel)] = "about" name = "about"></textarea>
     </mat-form-field>
     <br>
     <br>
     <mat-form-field appearance="fill">
         <mat-label>Skills</mat-label>
         <br>
-        <textarea matInput></textarea>
+        <textarea matInput [(ngModel)] = "skills" name = "skills"></textarea>
     </mat-form-field>
     <!-- Button Here to submit skills to unordered list area below
     <ul></ul> -->
     <br>
     <br>
     <mat-slider
+    [(ngModel)] = "salary" name = "salary"
     thumbLabel
     [displayWith]="formatLabel"
     tickInterval="1000"
     min="1"
     max="150000">Desired Salary</mat-slider>
 </div>
+
+<button (click) = "updateFinder()">Click Me</button>
+
+<button (click) = "goToProfile()">Go To Profile</button>

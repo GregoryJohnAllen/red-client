@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FinderService } from '../finder.service'
-import { HttpClient } from '@angular/common/http'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-seekerform',
@@ -17,7 +17,7 @@ export class SeekerformComponent implements OnInit {
 
 
 
-  constructor(private finderFetch:FinderService) {
+  constructor(private finderFetch:FinderService, private router:Router ) {
     this.updateSeeker()
    }
 
@@ -25,6 +25,7 @@ export class SeekerformComponent implements OnInit {
    getProfileData(){
     //  if(value = null)
     //  .then
+    // this.router.getProfileData().subscribe()
    }
 
    //inside function if something comes back wiht a null - redefined that var to empty string
@@ -38,8 +39,11 @@ export class SeekerformComponent implements OnInit {
        companies:this.companies
      }
      this.finderFetch.updateSeeker(formData).subscribe(response => {
-       console.log(response)
+       console.log(response);
      })
+   }
+   goToProfile(){
+    this.router.navigateByUrl(`/seekers`)
    }
   ngOnInit(): void {
   }

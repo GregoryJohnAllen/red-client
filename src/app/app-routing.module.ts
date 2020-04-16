@@ -16,6 +16,7 @@ import { NewsFeedComponent } from './news-feed/news-feed.component'
 import { 
   FormsService as FormJump 
 } from './forms.service';
+import { FeedControlComponent } from './feed-control/feed-control.component';
 
 
 const routes: Routes = [
@@ -28,7 +29,8 @@ const routes: Routes = [
   { path: 'finderform', component: FinderformComponent},
   { path: 'finderfeed', component: FinderFeedComponent},
   { path: 'newsfeed', component: NewsFeedComponent},
-  // { path: 'About', component:AboutComponent},
+  { path: 'feedcontrol', component: FeedControlComponent},
+
 
 
   //   path: 'admin', 

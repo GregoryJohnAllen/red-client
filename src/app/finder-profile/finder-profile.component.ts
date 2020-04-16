@@ -40,12 +40,6 @@ this.seekerFetch.getMyFinder().subscribe((formdata)=>{
   this.profile=formdata
 });
   }
-
-  feed(){
-    this.router.navigateByUrl(`/newsfeed`)
-
-     };
-
   updateInfo(){
     if (this.usertype=="admin"){
       return
@@ -53,6 +47,13 @@ this.seekerFetch.getMyFinder().subscribe((formdata)=>{
     let url = this.usertype=="seeker" ? "/finderform" : "/seekerform"
     this.router.navigateByUrl(url)
   }
+
+  feed(){
+    this.router.navigateByUrl(`/newsfeed`)
+
+     };
+
+  
 
   // updateProfile(userid){
   //   this.seekerFetch.updateFinder(userid,{finder:{diskrank:this.diskrank, employtype:this.employtype, about:this.about, skills:this.skills, salary:this.salary, project:this.projects}}).subscribe((formdata)=>{
